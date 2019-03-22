@@ -42,7 +42,7 @@ if __name__ == '__main__':
                 for line_c in line_content_contain:
                     is_in_line = is_in_line and line_c in line
                 if is_in_line and output_file:
-                    _line = str(line_number) + '---' + line
+                    _line = file + str(line_number) + '---' + line
                     print(_line)
                     with open(output_file, 'a+') as write_file:
                         write_file.write(_line)
