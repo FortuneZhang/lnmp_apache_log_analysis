@@ -21,6 +21,9 @@ if __name__ == '__main__':
             print('python main.py --filename 2018-03-03 --content 88,xx,yy')
             sys.exit()
 
+    with open(output_file, 'w+') as write_file:
+        write_file.truncate()
+
     all_need_read_file_log_list = []
     for root, dirs, files in os.walk('./'):
         for file in files:
